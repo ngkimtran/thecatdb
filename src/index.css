@@ -122,6 +122,9 @@ Buttons
 }
 .btn-details {
   padding: 0.25rem 0.4rem;
+  text-transform: lowercase;
+  text-align: center;
+  font-size: 1rem;
 }
 .btn-details:hover {
   background: var(--primaryLightColor);
@@ -242,6 +245,9 @@ Cat
 }
 .cat-footer {
   padding: 1.5rem;
+  display: grid;
+  grid-template-rows: .5fr .5fr 2fr .5fr .5fr;
+  
 }
 .cat-footer h3,
 .cat-footer h4,

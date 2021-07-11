@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGlobalContext } from '../context'
 import Loading from './Loading'
 import Cat from './Cat'
 
 const CatList = () => {
-    const { cats, loading } = useGlobalContext();
+    const { cats, loading, setSearchTerm } = useGlobalContext();
+    
+    useEffect(() => {
+        setSearchTerm('a');
+    }, [])
 
     if (loading) {
         return <Loading />

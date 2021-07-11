@@ -31,18 +31,22 @@ const Cat = ({ id, name, description, origin, temperament }) => {
 
     
         return (
-            <article className="cat">
-                <div className="img-container">
-                    {image!== undefined && <img src={image} alt={name} />}
-                </div>
-                <div className="cat-footer">
-                    <h3>{name}</h3>
-                    <h4>{origin}</h4>
-                    <p>{description}</p>
-                    <h5>{temperament}</h5>
-                    <Link to={`/cat/${id}`} className="btn btn-primary btn-details">details</Link>
-                </div>
-            </article>
+            <>
+            {image!== undefined &&
+                <article className="cat">
+                    <div className="img-container">
+                        <img src={image} alt={name} />
+                    </div>
+                    <div className="cat-footer">
+                        <h3>{name}</h3>
+                        <h4>{origin}</h4>
+                        <p>{description}</p>
+                        <h5>{temperament}</h5>
+                        <Link to={`/thecatdb/cat/${id}`} className="btn btn-primary btn-details">click for more details</Link>
+                    </div>
+                </article>
+            }
+            </>
         )
     
 }
