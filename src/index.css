@@ -141,7 +141,7 @@ Navbar
   height: 5rem;
   display: flex;
   align-items: center;
-  border-bottom: 2px solor var(--primaryColor);
+  border-bottom: 2px solid var(--primaryColor);
   box-shadow: var(--lightShadow);
 }
 .nav-center {
@@ -263,7 +263,6 @@ Cat
   margin-bottom: 0.5rem;
 }
 .cat-footer p {
-  color: var(--darkGrey);
   margin-bottom: 0.5rem;
 }
 
@@ -285,6 +284,7 @@ Form
   border-radius: var(--mainBorderRadius);
   box-shadow: var(--lightShadow);
 }
+
 .form-control label {
   display: block;
   margin-bottom: 1.25rem;
@@ -302,6 +302,77 @@ Form
   font-size: 1.2rem;
 }
 
+.filter-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem;
+}
+
+.filter-form {
+  width: 40vw;
+  background: var(--mainWhite);
+  padding: 2rem 2.5rem;
+  text-transform: capitalize;
+  border-radius: var(--mainBorderRadius);
+  box-shadow: var(--lightShadow);
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-color: transparent;
+}
+.filter-form optgroup {
+  letter-spacing: 0.25rem;
+  color: var(--primaryColor);
+  font-size: 1rem;
+}
+.filter-level {
+  border: none;
+  border-color: transparent;
+  font-size: 1.2rem;
+  width: 40vw;
+  background: var(--mainWhite);
+  padding: 1rem 1.5rem;
+  text-transform: capitalize;
+  border-radius: var(--mainBorderRadius);
+  box-shadow: var(--lightShadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.filter-level div {
+  display: flex;
+  justify-content: space-between;
+}
+input#level {
+  width: 80%;
+}
+.filter-level span {
+  padding: 0 2rem;
+}
+
+.filter-level.disabled {
+  pointer-events: none;
+  color:grey;
+}
+
+.filter-level.disabled input[type='range'] {
+  border: solid 1px #d4d4d4;
+  border-radius: 8px;
+  outline: none;
+  margin-top: .5rem;
+  height: .55rem;
+  -webkit-appearance: none;
+}
+
+.filter-level.disabled input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background:#cbcbcb;
+}
 /* 
 ====== 
 Breed
@@ -321,7 +392,6 @@ Breed
 }
 .breed p {
   font-weight: bold;
-  text-transform: capitalize;
   line-height: 1.8;
 }
 .breed span {
@@ -336,6 +406,7 @@ Breed
 .breed-info {
   padding-top: 2rem;
 }
+
 @media screen and (min-width: 992px) {
   .breed {
     display: grid;
@@ -347,6 +418,23 @@ Breed
     padding-top: 0;
   }
 }
+
+/* 
+====== 
+Error
+======
+*/
+
+.error-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 
+====== 
+Loader
+======
+*/
 
 .loader,
 .loader:before,
@@ -408,4 +496,3 @@ Breed
     height: 5em;
   }
 }
-

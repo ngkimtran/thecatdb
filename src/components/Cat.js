@@ -42,7 +42,7 @@ const Cat = ({ id, name, description, origin, temperament }) => {
                         <h4>{origin}</h4>
                         <p>{description}</p>
                         <h5>{temperament}</h5>
-                        <Link to={`/thecatdb/cat/${id}`} className="btn btn-primary btn-details">click for more details</Link>
+                        <Link to={`/cat/${id}`} className="btn btn-primary btn-details">click for more details</Link>
                     </div>
                 </article>
             }

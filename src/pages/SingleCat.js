@@ -83,7 +83,7 @@ const SingleCat = () => {
         console.log(images);
         return (
             <section className="section cat-section">
-                <Link to="/thecatdb/" className="btn btn-primary">back home</Link>
+                <Link to="/" className="btn btn-primary">back home</Link>
 
                 <h2 className="section-title">{name}</h2>
                 <div className="breed">

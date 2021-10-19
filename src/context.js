@@ -14,6 +14,8 @@ const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('a');
     const [cats, setCats] = useState([]);
+    const [filterParam, setFilterParam] = useState('all');
+    const [level, setLevel] = useState(1);
 
     if(searchTerm === '') {
         setSearchTerm('a');
@@ -32,7 +34,20 @@ const AppProvider = ({ children }) => {
                         name,
                         description,
                         origin,
-                        temperament
+                        temperament,
+                    // personality 
+                        adaptability,
+                        affection_level,
+                        child_friendly,
+                        dog_friendly,
+                        energy_level,
+                        grooming,
+                        health_issues,
+                        intelligence,
+                        shedding_level,
+                        social_needs,
+                        stranger_friendly,
+                        vocalisation
                     } = item;
 
                     return {
@@ -40,10 +55,30 @@ const AppProvider = ({ children }) => {
                         name,
                         description,
                         origin,
-                        temperament
+                        temperament,
+                        adaptability,
+                        affection_level,
+                        child_friendly,
+                        dog_friendly,
+                        energy_level,
+                        grooming,
+                        health_issues,
+                        intelligence,
+                        shedding_level,
+                        social_needs,
+                        stranger_friendly,
+                        vocalisation
                     }
                 })
-                setCats(newCats);
+                if (filterParam === 'all') {
+                    setCats(newCats);
+                }
+                else {
+                    setCats(newCats.filter((cat) => {
+                        return cat[filterParam] === Number(level)
+                    }
+                    ))
+                }
             } else {
                 setCats([]);
             }
@@ -53,14 +88,14 @@ const AppProvider = ({ children }) => {
             console.log(error);
             setLoading(false);
         }
-    }, [searchTerm]);
+    }, [filterParam, level, searchTerm]);
 
     useEffect(() => {
         fetchCats();
-    }, [searchTerm, fetchCats]);
+    }, [filterParam, searchTerm, fetchCats]);
 
     return (
-        <AppContext.Provider value={{loading, cats, setSearchTerm}}>
+        <AppContext.Provider value={{loading, cats, level, filterParam, setSearchTerm, setFilterParam, setLevel}}>
             {children}
         </AppContext.Provider>
     )
