@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/thecatdb/static/css/main.241ec9e5.chunk.css",
-    "main.js": "/thecatdb/static/js/main.6642447b.chunk.js",
-    "main.js.map": "/thecatdb/static/js/main.6642447b.chunk.js.map",
+    "main.js": "/thecatdb/static/js/main.dbbe2930.chunk.js",
+    "main.js.map": "/thecatdb/static/js/main.dbbe2930.chunk.js.map",
     "runtime-main.js": "/thecatdb/static/js/runtime-main.830daa9a.js",
     "runtime-main.js.map": "/thecatdb/static/js/runtime-main.830daa9a.js.map",
     "static/js/2.437127d0.chunk.js": "/thecatdb/static/js/2.437127d0.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.830daa9a.js",
     "static/js/2.437127d0.chunk.js",
     "static/css/main.241ec9e5.chunk.css",
-    "static/js/main.6642447b.chunk.js"
+    "static/js/main.dbbe2930.chunk.js"
   ]
 }
