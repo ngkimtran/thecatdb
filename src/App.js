@@ -10,7 +10,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div class='container'>
+    <Router basename="/thecatdb" >
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
@@ -18,7 +18,8 @@ function App() {
         <Route path="/cat/:id" component={SingleCat} />
         <Route path="*" component={Error} />
       </Switch>
-    </div>
+    </Router>
+
   );
 }
 

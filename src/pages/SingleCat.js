@@ -80,7 +80,6 @@ const SingleCat = () => {
             life_span, 
             wikipedia_url
         } = cat;
-        console.log(images);
         return (
             <section className="section cat-section">
                 <Link to="/" className="btn btn-primary">back home</Link>
