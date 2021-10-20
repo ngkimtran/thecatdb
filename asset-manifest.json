@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/thecatdb/static/css/main.241ec9e5.chunk.css",
-    "main.js": "/thecatdb/static/js/main.e69f2c16.chunk.js",
-    "main.js.map": "/thecatdb/static/js/main.e69f2c16.chunk.js.map",
+    "main.css": "/thecatdb/static/css/main.6ed72af2.chunk.css",
+    "main.js": "/thecatdb/static/js/main.fb2e43eb.chunk.js",
+    "main.js.map": "/thecatdb/static/js/main.fb2e43eb.chunk.js.map",
     "runtime-main.js": "/thecatdb/static/js/runtime-main.830daa9a.js",
     "runtime-main.js.map": "/thecatdb/static/js/runtime-main.830daa9a.js.map",
-    "static/js/2.0cf3b448.chunk.js": "/thecatdb/static/js/2.0cf3b448.chunk.js",
-    "static/js/2.0cf3b448.chunk.js.map": "/thecatdb/static/js/2.0cf3b448.chunk.js.map",
+    "static/js/2.a81e2688.chunk.js": "/thecatdb/static/js/2.a81e2688.chunk.js",
+    "static/js/2.a81e2688.chunk.js.map": "/thecatdb/static/js/2.a81e2688.chunk.js.map",
     "index.html": "/thecatdb/index.html",
-    "static/css/main.241ec9e5.chunk.css.map": "/thecatdb/static/css/main.241ec9e5.chunk.css.map",
-    "static/js/2.0cf3b448.chunk.js.LICENSE.txt": "/thecatdb/static/js/2.0cf3b448.chunk.js.LICENSE.txt"
+    "static/css/main.6ed72af2.chunk.css.map": "/thecatdb/static/css/main.6ed72af2.chunk.css.map",
+    "static/js/2.a81e2688.chunk.js.LICENSE.txt": "/thecatdb/static/js/2.a81e2688.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.830daa9a.js",
-    "static/js/2.0cf3b448.chunk.js",
-    "static/css/main.241ec9e5.chunk.css",
-    "static/js/main.e69f2c16.chunk.js"
+    "static/js/2.a81e2688.chunk.js",
+    "static/css/main.6ed72af2.chunk.css",
+    "static/js/main.fb2e43eb.chunk.js"
   ]
 }
