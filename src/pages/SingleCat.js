@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Loading from '../components/Loading'
 import { useParams, Link } from 'react-router-dom'
 
-const url = 'https://api.thecatapi.com/v1/images/search?breed_ids='
+const url = 'https://api.thecatapi.com/v1/breeds/'
+const image_url = 'https://api.thecatapi.com/v1/images/'
 const header = {
     method: 'get',
     headers: { 
@@ -15,7 +16,8 @@ const SingleCat = () => {
     const { id } = useParams();
     const [loading, setLoading] = useState(false);
     const [cat, setCat] = useState(null);
-    const [images, setImages] = useState([]);
+    const [image, setImage] = useState(null);
+    
 
     useEffect(() => {
         const getCat = async () => {
@@ -24,16 +26,17 @@ const SingleCat = () => {
             try {
                 const response = await fetch(`${url}${id}`, header);
                 const data = await response.json();
-
-                if(data[0].breeds) {
+                
+                if(data) {
                     const { 
                         name, 
                         description,
                         origin, 
                         temperament, 
                         life_span, 
-                        wikipedia_url
-                    } = data[0].breeds[0];
+                        wikipedia_url,
+                        reference_image_id
+                    } = data;
 
                     const newCat = {
                         name, 
@@ -41,11 +44,14 @@ const SingleCat = () => {
                         origin, 
                         temperament, 
                         life_span, 
-                        wikipedia_url
+                        wikipedia_url,
                     };
 
+                    const image_response = await fetch(`${image_url}${reference_image_id}`, header);
+                    const image_data = await image_response.json();
+
                     setCat(newCat);
-                    setImages(data);
+                    setImage(image_data);
                 } else {
                     setCat(null);
                 }
@@ -86,9 +92,7 @@ const SingleCat = () => {
 
                 <h2 className="section-title">{name}</h2>
                 <div className="breed">
-                    {images.map((item, index) => 
-                        <img key={index} src={item.url} alt={name} />
-                    )}
+                    <img src={image.url} alt={image.breeds[0].name} />
 
                     <div className="breed-info">
                         <p>
